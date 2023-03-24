@@ -1,10 +1,12 @@
 
 html{
   font-family: Helvetica, sans-serif;
+  background-color: white;
 }
 
 nav {
   position: fixed;
+  background-color: white;
   width: 100%;
   top: 0;
   left: 0;
@@ -14,59 +16,81 @@ header {
     display: flex;
     justify-content: space-between; 
 }
-header li a {
+header li a , footer li a{
   color: #000;
   font-size: 20px;
-  padding: 14px;
   display: block;
   text-align: center;
   text-decoration: none;
 }
 
-header li:hover {
+header li a:hover, footer li a:hover {
   color: #ff5925;
 }
 
 h1{
-  padding-top : 100px;
   color:#003333;
   font-size: 100px;
-  margin: 0;
+  margin-bottom: 0;
+  padding-bottom:0;
 }
 
-main{
-  margin-top: 100px;
-}
-#intro {
+
+
+#intro p {
   font-size:50px;
   margin:0;
   padding:0;
-}
+  width: 400px;
 
+}
 
 #introPic{
   width: 200px;
   height: 200px;
+  border-radius: 50%;
 }
+#project1pic{
+  max-height: 300px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 70px;
+}
+hr{
+  border: 1px solid #003333;
+  width: 80%;
+  margin: auto auto;
+  padding: 0;
+  
+}
+h3{
+  color: #003333;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+}
+.description{
+  font-size: 30px;
+
+}
+article{
+  margin: 100px;
+  min-height: 100vh;
+}
+
+
+
 #item1{
   display: flex; 
   justify-content: right;
-  align-items: right;
-
+  align-items: center;
 }
 
-  
+
 li {
   list-style-type: none;
-  float: right;
-
-  padding: 14px;
-  display: block;
-}
-
-li:last-child {
-  border-right: none;
-
+  float:right;
+  padding-right: 14px;
 }
 
 .container1{
@@ -74,26 +98,26 @@ li:last-child {
   grid-template-columns: 1fr 1fr ; 
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
 .container2{
   display: grid;
   justify-content: center;
   align-items: center;
-
+  grid-template-columns: 100%;
 }
+
+
 
 #landing{
   display: grid; 
 }
 
 footer{
-
   padding: 1px;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+
   width: 100%;
 }
 
