@@ -149,11 +149,18 @@ article{
   }
 
 }
-@media(max-width: 1300px){
-section{
-  max-width: 1300px;
+@media(min-width: 1300px){
+  #intro{
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+  }
+  .container1{
+    width: 1300px;
+    margin: auto auto;
+  }
 }
-}
+
 
   
 
