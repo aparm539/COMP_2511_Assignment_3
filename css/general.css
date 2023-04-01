@@ -1,17 +1,24 @@
-
+:root{
+  --color-one:#003333;
+  --color-two:#ff5925;
+}
 html{
   font-family: Helvetica, sans-serif;
   background-color: white;
 }
+*:focus{
+  outline: 5px solid var(--color-two);
+}
 
+/* Nav Bar/Footer styles*/
 nav {
   position: fixed;
   background-color: white;
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 100;
 }
-
 header {
     display: flex;
     justify-content: space-between; 
@@ -23,45 +30,60 @@ header li a , footer li a{
   text-align: center;
   text-decoration: none;
 }
-
 header li a:hover, footer li a:hover {
   color: #ff5925;
 }
+li {
+  list-style-type: none;
+  float:right;
+  padding-right: 14px;
+}
+footer{
+  padding: 1px;
+  text-align: center;
+}
 
+/* Landing Page Styles */
 h1{
   color:#003333;
   font-size: 100px;
   margin-bottom: 0;
-  padding-bottom:0;
 }
-
-
 
 #intro p {
   font-size:50px;
   margin:0;
   padding:0;
-  width: 400px;
-
 }
 
 #introPic{
-  width: 200px;
-  height: 200px;
+  max-width:400px;
   border-radius: 50%;
+  margin-top: 50px;
 }
-#project1pic{
-  max-height: 300px;
-  border-radius: 5px;
-  float: left;
-  margin-right: 70px;
+.container1{
+  position: relative;
+  top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr ; 
+  min-height: 75vh;
+  padding-bottom: 50px;
 }
+#intro{
+  justify-content: left;
+
+}
+#item1{
+  justify-content: right;
+  align-items: center;
+}
+/*Work section styles*/
+
 hr{
-  border: 1px solid #003333;
+  border: 1px solid var(--color-one);
   width: 80%;
   margin: auto auto;
   padding: 0;
-  
 }
 h3{
   color: #003333;
@@ -71,55 +93,72 @@ h3{
 }
 .description{
   font-size: 30px;
-
 }
 article{
-  margin: 100px;
-  min-height: 100vh;
+  margin: 50px 100px 20px 100px;
 }
-
-
-
-#item1{
-  display: flex; 
-  justify-content: right;
-  align-items: center;
-}
-
-
-li {
-  list-style-type: none;
-  float:right;
-  padding-right: 14px;
-}
-
-.container1{
-  display: grid;
-  grid-template-columns: 1fr 1fr ; 
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
 .container2{
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: 100%;
+  margin-bottom: 10px;
+}
+.project1pic{
+  max-height: 300px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 70px;
 }
 
 
+@media (max-width: 780px) {
+  #project1pic{
+    max-height: 200px;
+    border-radius: 5px;    
+    margin-bottom:10px;
+  }
+  figure{
+    margin: auto auto;
+  }
+  .container2{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 100%;
+  }
+  .container1{
+    position: relative;
+    top: 60px;
+    display: grid;
+    grid-template-columns: 100%; 
+    min-height: 75vh;
+    min-width: 630px;
+    padding-bottom: 50px;
+  }
+  #intro{
+    justify-content: center;
+    align-items: center;
+  }
+  #item1{
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+    margin:0;
+  }
 
-#landing{
-  display: grid; 
+}
+@media(max-width: 1300px){
+section{
+  max-width: 1300px;
+}
 }
 
-footer{
-  padding: 1px;
-  text-align: center;
+  
 
-  width: 100%;
-}
+
+
 
 
 
